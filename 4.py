@@ -11,10 +11,17 @@ koeff=[]
 for i in range(k+1):
     koeff.append(randint(0,3))
 print(koeff)
-# koeff=[6, 5, 4, 3, 2, 1]
 data = open('многочлен.txt','a',encoding='UTF-8')
+x=0
 
-for i in range(k+1):
+for j in range(len(koeff)):
+    if koeff[len(koeff)-1-j]==0:
+        x+=1
+    else:
+        break
+print(x)
+
+for i in range(k+1-x):
     if koeff[i]==1:#если коэффицинет=1, то не печатаем его
         data.write("x^")
         data.write(str(k-i))
@@ -27,6 +34,6 @@ for i in range(k+1):
             data.write("+")
         else:
             data.write(str(koeff[i]))
+if x!=0
 data.write("=0")
 data.close()
-
