@@ -9,23 +9,14 @@ for i in range(count):
 print(numbers)
 numbers.sort()
 print(numbers)
-numbers1=[]
-x=False
+b=[]
+x=True
 
-length=len(numbers)
-
-for i in range(1,length):
-    if numbers[i]==numbers[i-1]:
-        numbers.remove(numbers[i-1])
-        length-=1
-        print(length)
-print(numbers)
-
-
-#         if numbers[j]==numbers[i]:
-#             numbers.remove(numbers[j])
-#     print(x)
-#     if x==False:
-#         numbers1.append(numbers[i])
-#     x=False
-# print(numbers)
+for i in range(0,len(numbers)):
+    for j in range(i+1,len(numbers)):
+        if numbers[j]==numbers[i]:
+            x=False
+    if x==True:
+        b.append(numbers[i])
+    x=True
+print(b)
