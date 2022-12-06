@@ -10,13 +10,12 @@ print(numbers)
 numbers.sort()
 print(numbers)
 b=[]
-x=True
-
+x=1
 for i in range(0,len(numbers)):
-    for j in range(i+1,len(numbers)):
-        if numbers[j]==numbers[i]:
-            x=False
-    if x==True:
+    for j in range(0,len(numbers)):
+        if numbers[i]==numbers[j]:
+            x+=1
+    if x==2:
         b.append(numbers[i])
-    x=True
+    x=1
 print(b)
