@@ -5,16 +5,27 @@ count=int(input("Введите количество последователь�
 from random import randint
 numbers=[]
 for i in range(count):
-    numbers.append(randint(0,10))
+    numbers.append(randint(0,5))
 print(numbers)
 numbers.sort()
 print(numbers)
+numbers1=[]
+x=False
 
-for i in range(0,len(numbers)):
-    x=0
-    for j in range(i+1,len(numbers)):
-        if numbers[i]==numbers[j]:
-            x=1
-    if x==0:
-        print(numbers[i])    
+length=len(numbers)
 
+for i in range(1,length):
+    if numbers[i]==numbers[i-1]:
+        numbers.remove(numbers[i-1])
+        length-=1
+        print(length)
+print(numbers)
+
+
+#         if numbers[j]==numbers[i]:
+#             numbers.remove(numbers[j])
+#     print(x)
+#     if x==False:
+#         numbers1.append(numbers[i])
+#     x=False
+# print(numbers)
