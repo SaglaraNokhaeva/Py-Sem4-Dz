@@ -6,7 +6,7 @@ from random import randint
 k=int(input("Введите степень многочлена: "))
 koeff=[]
 for i in range(k+1):
-    koeff.append(randint(0,1))
+    koeff.append(randint(0,101))
 # koeff=[0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0]
 print(koeff)
 data = open('многочлен.txt','a',encoding='UTF-8')
