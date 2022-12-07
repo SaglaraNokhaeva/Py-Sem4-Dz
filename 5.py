@@ -2,3 +2,7 @@
 # Задача - сформировать файл, содержащий сумму многочленов.
 
 data = open('многочлен1.txt','r',encoding='UTF-8')
+s1=data.readline()
+data1 = open('многочлен2.txt','r',encoding='UTF-8')
+s2=data1.readline()
+
